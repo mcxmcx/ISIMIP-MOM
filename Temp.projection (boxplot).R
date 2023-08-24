@@ -1,3 +1,5 @@
+# 1. Drawing boxplot for 1 m temp
+
 temp.1m=read.csv("1m temp.csv",header=T)
 
 tiff("temp.projection.1m.tiff",res=300,width=40,height=20,units="cm") 
@@ -5,7 +7,7 @@ tiff("temp.projection.1m.tiff",res=300,width=40,height=20,units="cm")
 p=ggplot(temp.1m,aes(Period,Temp))
 p+geom_boxplot(aes(fill=Rcp),outlier.shape = NA)+
   xlab("")+
-  ylab("Temperature (°C)")+
+  ylab("Temperature (Â°C)")+
   theme_bw()+
   scale_fill_wsj()+
   theme(plot.margin=unit(c(1,0.5,1,0.92), "cm"), 
@@ -26,6 +28,8 @@ p+geom_boxplot(aes(fill=Rcp),outlier.shape = NA)+
 
 dev.off()    
 
+# 2. Drawing boxplot for 10 m temp
+
 temp.10m=read.csv("10m temp.csv",header=T)
 
 tiff("temp.projection.10m.tiff",res=300,width=40,height=20,units="cm") 
@@ -33,7 +37,7 @@ tiff("temp.projection.10m.tiff",res=300,width=40,height=20,units="cm")
 p=ggplot(temp.10m,aes(Period,Temp))
 p+geom_boxplot(aes(fill=Rcp),outlier.shape = NA)+
   xlab("")+
-  ylab("Temperature (°C)")+
+  ylab("Temperature (Â°C)")+
   theme_bw()+
   scale_fill_wsj()+
   theme(plot.margin=unit(c(1,0.5,1,0.92), "cm"), 
@@ -54,6 +58,9 @@ p+geom_boxplot(aes(fill=Rcp),outlier.shape = NA)+
 
 dev.off()   
 
+
+# 3. Drawing boxplot for 10 m temp
+
 temp.60m=read.csv("60m temp.csv",header=T)
 
 tiff("temp.projection.60m.tiff",res=300,width=40,height=20,units="cm") 
@@ -62,7 +69,7 @@ p=ggplot(temp.60m,aes(Period,Temp))
 p+geom_boxplot(aes(fill=Rcp),outlier.shape = NA)+
   # ylim(5,10)+
   xlab("")+
-  ylab("Temperature (°C)")+
+  ylab("Temperature (Â°C)")+
   theme_bw()+
   #theme_economist()+
   scale_fill_wsj()+
