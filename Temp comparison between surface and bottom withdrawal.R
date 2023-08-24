@@ -1,3 +1,5 @@
+# 1. for 1 m water temperature
+
 temp1m.compare=read.csv("temp1m.compare.csv",header=T)
 
 tiff(filename="1m temp compare surf and with.tiff",width=50,height=25,units="cm",compression="lzw",res=300,bg="white")
@@ -9,7 +11,7 @@ p+
   geom_line(aes(y=Mean,color=Type),size=3.5)+
   ylim(9,17)+
   theme_bw()+
-  ylab("Temperature (°C)")+
+  ylab("Temperature (Â°C)")+
   scale_color_wsj()+
   scale_fill_wsj()+
   theme(plot.margin = unit(c(0.5,0.5, 2.5, 1.03), "inches"),
@@ -35,6 +37,7 @@ p+
 
 dev.off()
 
+# 2. for 10 m water temperature
 
 temp10m.compare=read.csv("temp10m.compare.csv",header=T)
 
@@ -47,7 +50,7 @@ p+
   geom_line(aes(y=Mean,color=Type),size=3.5)+
   #ylim(4,12)+
   theme_bw()+
-  ylab("Temperature (°C)")+
+  ylab("Temperature (Â°C)")+
   scale_color_wsj()+
   scale_fill_wsj()+
   theme(plot.margin = unit(c(0.5,0.5, 2.5, 1.03), "inches"),
@@ -73,7 +76,7 @@ p+
 
 dev.off()
 
-
+# 3. for 60 m water temperature
 
 temp60m.compare=read.csv("temp60m.compare.csv",header=T)
 
@@ -86,7 +89,7 @@ p+
   geom_line(aes(y=Mean,color=Type),size=3.5)+
   ylim(4,10)+
   theme_bw()+
-  ylab("Temperature (°C)")+
+  ylab("Temperature (Â°C)")+
   scale_color_wsj()+
   scale_fill_wsj()+
   theme(plot.margin = unit(c(0.5,0.5, 2.5, 1.03), "inches"),
